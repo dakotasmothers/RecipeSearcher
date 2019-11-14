@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import RecipeList from '../RecipeList/RecipeList';
 import Header from '../Header/Header';
+import './RecipeSearcher.css';
 class RecipeSearcher extends Component {
     constructor(props) {
         super(props);
@@ -59,7 +60,7 @@ class RecipeSearcher extends Component {
     }
     render() {
         return (
-            <div>
+            <div className='header'>
                 <Header 
                     randomRecipeHandler={this.getRandomRecipe}
                     recipeByLetterHandler = {this.getRecipesByLetter}

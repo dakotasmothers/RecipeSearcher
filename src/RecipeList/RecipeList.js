@@ -25,9 +25,16 @@ class RecipeList extends Component {
         return output;
     }
     render() {
-        return (
-            <ul>{this.getListItems()}</ul>
-        );
+        if (this.props.recipes.length > 0){
+            return (
+                <ul>{this.getListItems()}</ul>
+            );
+        } else {
+            return(
+            <h1>No recipes were found. Please try a different letter or keyword</h1>
+            )
+        }
+        
     }
 }
 export default RecipeList;
